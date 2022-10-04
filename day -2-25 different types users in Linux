@@ -1,0 +1,19 @@
+# CSA0475-OS
+# include <stdio.h>
+# include <string.h>
+int main( )
+{    FILE *fp ;
+    char data[50];
+    printf( "Opening the file test.c in write mode" ) ;
+    fp = fopen("test.txt", "w") ;
+    if ( fp == NULL )
+    {
+	printf( "Could not open file test.txt" ) ;
+    }    printf( "\n Enter some text from keyboard to write in the file test.txt" ) ;    while ( strlen ( gets( data ) ) > 0 )
+    {	fputs(data, fp) ;
+	fputs("\n", fp) ;
+    }    printf("Closing the file test.txt") ;
+    fclose(fp) ;
+    return 0;
+}
+![Screenshot (104)](https://user-images.githubusercontent.com/113354880/193773195-d9d1954b-6937-45b4-bc5c-5a0f24ab9a52.png)
